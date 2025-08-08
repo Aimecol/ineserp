@@ -14,6 +14,7 @@ import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
 import { useEffect, useState } from "react"
+import { useAuth } from "@/lib/auth-context"
 
 type SiteHeaderProps = {
   title?: string
@@ -21,10 +22,15 @@ type SiteHeaderProps = {
 
 export function SiteHeader({ title = "Dashboard" }: SiteHeaderProps) {
   const [mounted, setMounted] = useState(false)
+  const { user, logout } = useAuth()
 
   useEffect(() => {
     setMounted(true)
   }, [])
+
+  const getInitials = (name: string) => {
+    return name.split(' ').map(n => n[0]).join('').toUpperCase()
+  }
 
   return (
     <motion.header
@@ -54,17 +60,17 @@ export function SiteHeader({ title = "Dashboard" }: SiteHeaderProps) {
           <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="flex items-center gap-2">
               <Avatar className="h-7 w-7">
-                <AvatarFallback>JD</AvatarFallback>
+                <AvatarFallback>{user ? getInitials(user.name) : 'U'}</AvatarFallback>
               </Avatar>
-              <span className="hidden text-sm sm:inline">John Doe</span>
+              <span className="hidden text-sm sm:inline">{user?.name || 'User'}</span>
               <ChevronDown className="h-4 w-4 text-[#6c8391]" />
             </Button>
           </DropdownMenuTrigger>
           <DropdownMenuContent align="end" className="w-56">
             <DropdownMenuLabel>
               <div className="flex flex-col">
-                <span className="font-medium">John Doe</span>
-                <span className="text-xs text-muted-foreground">Administrator</span>
+                <span className="font-medium">{user?.name || 'User'}</span>
+                <span className="text-xs text-muted-foreground">{user?.role || 'Role'}</span>
               </div>
             </DropdownMenuLabel>
             <DropdownMenuSeparator />
@@ -77,7 +83,7 @@ export function SiteHeader({ title = "Dashboard" }: SiteHeaderProps) {
               Settings
             </DropdownMenuItem>
             <DropdownMenuSeparator />
-            <DropdownMenuItem className="text-red-600">
+            <DropdownMenuItem className="text-red-600" onClick={logout}>
               <LogOut className="mr-2 h-4 w-4" />
               Logout
             </DropdownMenuItem>

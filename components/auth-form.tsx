@@ -11,6 +11,7 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Checkbox } from "@/components/ui/checkbox"
 import { useToast } from "@/hooks/use-toast"
+import { useAuth } from "@/lib/auth-context"
 
 const schema = z.object({
   email: z.string().email("Please enter a valid email address"),
@@ -23,6 +24,7 @@ type FormValues = z.infer<typeof schema>
 export default function AuthForm() {
   const { toast } = useToast()
   const router = useRouter()
+  const { login } = useAuth()
   const [loading, setLoading] = useState(false)
 
   const {
@@ -37,8 +39,8 @@ export default function AuthForm() {
   const onSubmit = async (values: FormValues) => {
     setLoading(true)
     try {
-      await new Promise((r) => setTimeout(r, 900))
-      if (values.email === "admin@example.com" && values.password === "password") {
+      const success = await login(values.email, values.password)
+      if (success) {
         toast({
           title: "Welcome back!",
           description: "You have logged in successfully.",
@@ -51,6 +53,12 @@ export default function AuthForm() {
           variant: "destructive",
         })
       }
+    } catch (error) {
+      toast({
+        title: "Something went wrong",
+        description: "Please try again later.",
+        variant: "destructive",
+      })
     } finally {
       setLoading(false)
     }

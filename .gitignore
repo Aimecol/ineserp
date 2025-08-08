@@ -197,3 +197,184 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# ===== ADDITIONAL ENTRIES FOR ERP SYSTEM =====
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Backup files
+*.bak
+*.backup
+*.old
+*.orig
+
+# Archive files
+*.zip
+*.rar
+*.7z
+*.tar
+*.gz
+
+# Application specific uploads and storage
+uploads/
+storage/
+public/uploads/
+public/storage/
+temp/
+tmp/
+
+# Configuration files with sensitive data
+config/database.yml
+config/secrets.yml
+config/master.key
+.env.example
+
+# SSL certificates and security files
+*.pem
+*.key
+*.crt
+*.csr
+*.p12
+*.pfx
+secrets.json
+.secrets/
+
+# Cloud platform files
+.vercel
+.netlify
+.firebase/
+firebase-debug.log
+firestore-debug.log
+.supabase/
+.aws/
+.gcloud/
+service-account-key.json
+.azure/
+
+# Docker files (if using containerization)
+.dockerignore
+docker-compose.override.yml
+
+# Kubernetes files
+k8s/
+
+# Terraform files
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Testing and coverage
+test-results/
+playwright-report/
+test-results.xml
+junit.xml
+chromatic-build/
+
+# Storybook
+storybook-static/
+
+# Build tools and bundlers
+.turbo/
+.swc/
+.parcel-cache/
+
+# Monitoring and analytics
+.sentry/
+
+# Performance profiling
+*.prof
+*.heap
+*.cpuprofile
+
+# Generated files
+generated/
+auto-generated/
+.generated/
+
+# Temporary files
+*.tmp
+*.temp
+.#*
+#*#
+
+# Package manager lock files (uncomment if you want to ignore them)
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
+
+# IDE specific files
+.vscode/settings.json
+.vscode/launch.json
+.vscode/extensions.json
+*.iml
+*.ipr
+*.iws
+
+# System files
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# macOS specific
+.AppleDouble
+.LSOverride
+Icon
+.DocumentRevisions-V100
+.fseventsd
+.TemporaryItems
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux specific
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# Windows specific
+Desktop.ini
+*.msix
+*.lnk
+
+# Project specific - ERP System
+# Add any project-specific files or directories to ignore
+public/assets/uploads/
+storage/app/
+storage/framework/
+storage/logs/
+bootstrap/cache/
+vendor/
+
+# Reports and exports (if generated locally)
+reports/exports/
+exports/
+downloads/
+
+# Local development environment
+.local
+.dev/
+
+# Documentation builds
+docs/build/
+docs/dist/
+
+# Cache directories
+.cache/
+cache/
+
+# Prisma (if using)
+prisma/migrations/
+
+# End of additional entries
