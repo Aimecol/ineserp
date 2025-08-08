@@ -35,7 +35,7 @@ import {
 } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast"
 import { format, differenceInDays } from "date-fns"
-import { cn } from "@/lib/utils"
+import { cn, formatCurrency } from "@/lib/utils"
 
 // Types
 type RecordType = "Payable" | "Receivable"
@@ -679,7 +679,7 @@ export default function PayablesReceivablesPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-red-600">
-              ${totalPayables.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              {formatCurrency(totalPayables, { minimumFractionDigits: 2 })}
             </div>
             <p className="text-xs text-muted-foreground">
               Outstanding amounts owed
@@ -694,7 +694,7 @@ export default function PayablesReceivablesPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-green-600">
-              ${totalReceivables.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              {formatCurrency(totalReceivables, { minimumFractionDigits: 2 })}
             </div>
             <p className="text-xs text-muted-foreground">
               Outstanding amounts due
@@ -842,12 +842,12 @@ export default function PayablesReceivablesPage() {
                       </TableCell>
                       <TableCell>
                         <div className={`font-medium ${record.type === 'Receivable' ? 'text-green-600' : 'text-red-600'}`}>
-                          ${record.amount.toFixed(2)}
+                          {formatCurrency(record.amount)}
                         </div>
                       </TableCell>
                       <TableCell>
                         <div className="font-medium">
-                          ${record.paidAmount.toFixed(2)}
+                          {formatCurrency(record.paidAmount)}
                         </div>
                         {record.lastPaymentDate && (
                           <div className="text-xs text-gray-500">
