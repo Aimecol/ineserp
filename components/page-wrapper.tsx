@@ -12,6 +12,7 @@ import {
   TableRow,
 } from "@/components/ui/table"
 import { Plus } from 'lucide-react'
+import { useEffect, useState } from "react"
 
 type Row = {
   id: string
@@ -39,11 +40,17 @@ export function PageWrapper({
   onActionClick,
   rows = defaultRows,
 }: PageWrapperProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
     <motion.div
-      initial={{ opacity: 0, y: 8 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.25 }}
+      initial={mounted ? { opacity: 0, y: 8 } : false}
+      animate={mounted ? { opacity: 1, y: 0 } : false}
+      transition={mounted ? { duration: 0.25 } : false}
       className="px-4 pb-8 pt-4 md:px-6"
     >
       <div className="mb-4 flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">

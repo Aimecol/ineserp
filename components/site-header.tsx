@@ -13,17 +13,24 @@ import {
 import { Avatar, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import { useEffect, useState } from "react"
 
 type SiteHeaderProps = {
   title?: string
 }
 
 export function SiteHeader({ title = "Dashboard" }: SiteHeaderProps) {
+  const [mounted, setMounted] = useState(false)
+
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+
   return (
     <motion.header
-      initial={{ y: -8, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.25 }}
+      initial={mounted ? { y: -8, opacity: 0 } : false}
+      animate={mounted ? { y: 0, opacity: 1 } : false}
+      transition={mounted ? { duration: 0.25 } : false}
       className="sticky top-0 z-30 border-b bg-white/90 backdrop-blur supports-[backdrop-filter]:bg-white/60"
     >
       <div className="flex h-14 items-center gap-2 px-3">
