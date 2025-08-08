@@ -34,7 +34,7 @@ import {
 } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast"
 import { format } from "date-fns"
-import { cn } from "@/lib/utils"
+import { cn, formatCurrency } from "@/lib/utils"
 
 // Types
 type TransactionType = "Income" | "Expense"
@@ -555,7 +555,7 @@ export default function IncomeExpensesPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-green-600">
-              ${totalIncome.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              {formatCurrency(totalIncome, { minimumFractionDigits: 2 })}
             </div>
             <p className="text-xs text-muted-foreground">
               Completed transactions
@@ -570,7 +570,7 @@ export default function IncomeExpensesPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-red-600">
-              ${totalExpenses.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              {formatCurrency(totalExpenses, { minimumFractionDigits: 2 })}
             </div>
             <p className="text-xs text-muted-foreground">
               Completed transactions
@@ -585,7 +585,7 @@ export default function IncomeExpensesPage() {
           </CardHeader>
           <CardContent>
             <div className={`text-2xl font-bold ${netIncome >= 0 ? 'text-green-600' : 'text-red-600'}`}>
-              ${Math.abs(netIncome).toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              {formatCurrency(Math.abs(netIncome), { minimumFractionDigits: 2 })}
             </div>
             <p className="text-xs text-muted-foreground">
               {netIncome >= 0 ? 'Profit' : 'Loss'}

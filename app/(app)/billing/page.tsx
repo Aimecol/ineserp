@@ -38,7 +38,7 @@ import {
 } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast"
 import { format, addDays } from "date-fns"
-import { cn } from "@/lib/utils"
+import { cn, formatCurrency } from "@/lib/utils"
 
 // Types
 type InvoiceStatus = "Draft" | "Sent" | "Paid" | "Overdue" | "Cancelled"
@@ -821,7 +821,7 @@ export default function BillingPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-blue-600">
-              ${totalInvoiced.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              {formatCurrency(totalInvoiced, { minimumFractionDigits: 2 })}
             </div>
             <p className="text-xs text-muted-foreground">
               All invoices issued
@@ -836,7 +836,7 @@ export default function BillingPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-green-600">
-              ${totalPaid.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              {formatCurrency(totalPaid, { minimumFractionDigits: 2 })}
             </div>
             <p className="text-xs text-muted-foreground">
               Payments received
@@ -851,7 +851,7 @@ export default function BillingPage() {
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold text-yellow-600">
-              ${totalOutstanding.toLocaleString('en-US', { minimumFractionDigits: 2 })}
+              {formatCurrency(totalOutstanding, { minimumFractionDigits: 2 })}
             </div>
             <p className="text-xs text-muted-foreground">
               Awaiting payment
@@ -964,10 +964,10 @@ export default function BillingPage() {
                       <TableCell>{format(new Date(document.issueDate), "MMM dd, yyyy")}</TableCell>
                       <TableCell>{format(new Date(document.dueDate), "MMM dd, yyyy")}</TableCell>
                       <TableCell>
-                        <div className="font-medium">${document.total.toFixed(2)}</div>
+                        <div className="font-medium">{formatCurrency(document.total)}</div>
                       </TableCell>
                       <TableCell>
-                        <div className="font-medium">${document.paidAmount.toFixed(2)}</div>
+                        <div className="font-medium">{formatCurrency(document.paidAmount)}</div>
                         {document.paymentDate && (
                           <div className="text-xs text-gray-500">
                             Paid: {format(new Date(document.paymentDate), "MMM dd")}
@@ -976,7 +976,7 @@ export default function BillingPage() {
                       </TableCell>
                       <TableCell>
                         <div className={`font-medium ${balance > 0 ? 'text-red-600' : 'text-gray-500'}`}>
-                          ${balance.toFixed(2)}
+                          {formatCurrency(balance)}
                         </div>
                       </TableCell>
                       <TableCell>
