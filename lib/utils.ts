@@ -17,10 +17,20 @@ export function formatCurrency(amount: number, options?: {
 }): string {
   const { minimumFractionDigits = 0, maximumFractionDigits = 2 } = options || {}
 
-  return new Intl.NumberFormat('rw-RW', {
-    style: 'currency',
-    currency: 'RWF',
-    minimumFractionDigits,
-    maximumFractionDigits,
-  }).format(amount)
+  try {
+    // Try to use Rwandan locale first
+    return new Intl.NumberFormat('rw-RW', {
+      style: 'currency',
+      currency: 'RWF',
+      minimumFractionDigits,
+      maximumFractionDigits,
+    }).format(amount)
+  } catch (error) {
+    // Fallback to manual formatting if locale is not supported
+    const formattedNumber = new Intl.NumberFormat('en-US', {
+      minimumFractionDigits,
+      maximumFractionDigits,
+    }).format(amount)
+    return `RWF ${formattedNumber}`
+  }
 }

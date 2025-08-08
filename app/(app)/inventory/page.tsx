@@ -30,6 +30,7 @@ import {
   Download
 } from 'lucide-react'
 import { useToast } from "@/hooks/use-toast"
+import { formatCurrency } from "@/lib/utils"
 
 // Types
 type InventoryItem = {
@@ -477,7 +478,7 @@ export default function InventoryPage() {
             <TrendingUp className="h-4 w-4 text-muted-foreground" />
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">${totalValue.toLocaleString('en-US', { minimumFractionDigits: 2 })}</div>
+            <div className="text-2xl font-bold">{formatCurrency(totalValue, { minimumFractionDigits: 2 })}</div>
             <p className="text-xs text-muted-foreground">
               Current inventory value
             </p>
@@ -608,8 +609,8 @@ export default function InventoryPage() {
                         )}
                       </div>
                     </TableCell>
-                    <TableCell>${item.unitPrice.toFixed(2)}</TableCell>
-                    <TableCell>${(item.quantity * item.unitPrice).toFixed(2)}</TableCell>
+                    <TableCell>{formatCurrency(item.unitPrice)}</TableCell>
+                    <TableCell>{formatCurrency(item.quantity * item.unitPrice)}</TableCell>
                     <TableCell>
                       <StatusBadge status={item.status} />
                     </TableCell>

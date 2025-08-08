@@ -857,7 +857,7 @@ export default function PayablesReceivablesPage() {
                       </TableCell>
                       <TableCell>
                         <div className={`font-medium ${balance > 0 ? (record.type === 'Receivable' ? 'text-green-600' : 'text-red-600') : 'text-gray-500'}`}>
-                          ${balance.toFixed(2)}
+                          {formatCurrency(balance)}
                         </div>
                       </TableCell>
                       <TableCell>

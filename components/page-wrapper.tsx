@@ -29,9 +29,9 @@ type PageWrapperProps = {
 }
 
 const defaultRows: Row[] = [
-  { id: "TX-1001", name: "Acme Corp Retainer", amount: "$3,200.00", status: "Paid" },
-  { id: "TX-1002", name: "Vendor Invoice", amount: "$1,150.00", status: "Pending" },
-  { id: "TX-1003", name: "Office Lease", amount: "$9,800.00", status: "Overdue" },
+  { id: "TX-1001", name: "Acme Corp Retainer", amount: "RWF 3,200,000", status: "Paid" },
+  { id: "TX-1002", name: "Vendor Invoice", amount: "RWF 1,150,000", status: "Pending" },
+  { id: "TX-1003", name: "Office Lease", amount: "RWF 9,800,000", status: "Overdue" },
 ]
 
 export function PageWrapper({

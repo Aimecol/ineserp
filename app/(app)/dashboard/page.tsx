@@ -6,9 +6,9 @@ export default function DashboardPage() {
       title="Dashboard"
       actionLabel="New Widget"
       rows={[
-        { id: "DB-2001", name: "Monthly Summary", amount: "$12,450.00", status: "Paid" },
-        { id: "DB-2002", name: "Q3 Forecast", amount: "$—", status: "Pending" },
-        { id: "DB-2003", name: "Variance Report", amount: "$—", status: "Overdue" },
+        { id: "DB-2001", name: "Monthly Summary", amount: "RWF 12,450,000", status: "Paid" },
+        { id: "DB-2002", name: "Q3 Forecast", amount: "RWF —", status: "Pending" },
+        { id: "DB-2003", name: "Variance Report", amount: "RWF —", status: "Overdue" },
       ]}
     />
   )

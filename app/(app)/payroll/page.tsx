@@ -6,9 +6,9 @@ export default function PayrollPage() {
       title="Payroll"
       actionLabel="Run Payroll"
       rows={[
-        { id: "PY-10001", name: "July Salaries", amount: "$72,000.00", status: "Paid" },
-        { id: "PY-10002", name: "Overtime", amount: "$3,400.00", status: "Pending" },
-        { id: "PY-10003", name: "Bonuses", amount: "$12,000.00", status: "Overdue" },
+        { id: "PY-10001", name: "July Salaries", amount: "RWF 72,000,000", status: "Paid" },
+        { id: "PY-10002", name: "Overtime", amount: "RWF 3,400,000", status: "Pending" },
+        { id: "PY-10003", name: "Bonuses", amount: "RWF 12,000,000", status: "Overdue" },
       ]}
     />
   )
