@@ -1,0 +1,17 @@
+1:"$Sreact.fragment"
+2:I[76052,["4277","static/chunks/4277-46fdfdc2178f8072.js","1943","static/chunks/1943-da8562305012229e.js","7177","static/chunks/app/layout-2d6b3886914f2a64.js"],"AuthProvider"]
+3:I[87555,[],""]
+4:I[31295,[],""]
+5:I[552,["4277","static/chunks/4277-46fdfdc2178f8072.js","1943","static/chunks/1943-da8562305012229e.js","7177","static/chunks/app/layout-2d6b3886914f2a64.js"],"Toaster"]
+7:I[59665,[],"OutletBoundary"]
+a:I[59665,[],"ViewportBoundary"]
+c:I[59665,[],"MetadataBoundary"]
+e:I[26614,[],""]
+:HL["/_next/static/css/6ad9841b43ad2bc9.css","style"]
+:HL["/_next/static/css/86eabc77394306ec.css","style"]
+0:{"P":null,"b":"yF4vjTC9inVs9njbE9pN-","p":"","c":["",""],"i":false,"f":[[["",{"children":["__PAGE__",{}]},"$undefined","$undefined",true],["",["$","$1","c",{"children":[[["$","link","0",{"rel":"stylesheet","href":"/_next/static/css/6ad9841b43ad2bc9.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}],["$","link","1",{"rel":"stylesheet","href":"/_next/static/css/86eabc77394306ec.css","precedence":"next","crossOrigin":"$undefined","nonce":"$undefined"}]],["$","html",null,{"lang":"en","className":"__variable_fb8f2c __variable_f910ec","children":["$","body",null,{"className":"__className_fb8f2c","children":["$","$L2",null,{"children":[["$","$L3",null,{"parallelRouterKey":"children","error":"$undefined","errorStyles":"$undefined","errorScripts":"$undefined","template":["$","$L4",null,{}],"templateStyles":"$undefined","templateScripts":"$undefined","notFound":[[["$","title",null,{"children":"404: This page could not be found."}],["$","div",null,{"style":{"fontFamily":"system-ui,\"Segoe UI\",Roboto,Helvetica,Arial,sans-serif,\"Apple Color Emoji\",\"Segoe UI Emoji\"","height":"100vh","textAlign":"center","display":"flex","flexDirection":"column","alignItems":"center","justifyContent":"center"},"children":["$","div",null,{"children":[["$","style",null,{"dangerouslySetInnerHTML":{"__html":"body{color:#000;background:#fff;margin:0}.next-error-h1{border-right:1px solid rgba(0,0,0,.3)}@media (prefers-color-scheme:dark){body{color:#fff;background:#000}.next-error-h1{border-right:1px solid rgba(255,255,255,.3)}}"}}],["$","h1",null,{"className":"next-error-h1","style":{"display":"inline-block","margin":"0 20px 0 0","padding":"0 23px 0 0","fontSize":24,"fontWeight":500,"verticalAlign":"top","lineHeight":"49px"},"children":404}],["$","div",null,{"style":{"display":"inline-block"},"children":["$","h2",null,{"style":{"fontSize":14,"fontWeight":400,"lineHeight":"49px","margin":0},"children":"This page could not be found."}]}]]}]}]],[]],"forbidden":"$undefined","unauthorized":"$undefined"}],["$","$L5",null,{}]]}]}]}]]}],{"children":["__PAGE__",["$","$1","c",{"children":["$L6","$undefined",null,["$","$L7",null,{"children":["$L8","$L9",null]}]]}],{},null,false]},null,false],["$","$1","h",{"children":[null,["$","$1","PjeWxKtu10Vuxj8ji68rK",{"children":[["$","$La",null,{"children":"$Lb"}],null]}],["$","$Lc",null,{"children":"$Ld"}]]}],false]],"m":"$undefined","G":["$e","$undefined"],"s":false,"S":true}
+6:E{"digest":"NEXT_REDIRECT;replace;/login;307;"}
+b:[["$","meta","0",{"charSet":"utf-8"}],["$","meta","1",{"name":"viewport","content":"width=device-width, initial-scale=1"}]]
+8:null
+9:null
+d:[["$","title","0",{"children":"Springfield University ERP"}],["$","meta","1",{"name":"description","content":"Institutional Enterprise Resource Planning System"}],["$","meta","2",{"name":"generator","content":"Next.js"}]]

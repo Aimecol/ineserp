@@ -1,0 +1,307 @@
+{
+  "version": 3,
+  "pages404": true,
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "dynamicRoutes": [],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/billing",
+      "regex": "^/billing(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/billing(?:/)?$"
+    },
+    {
+      "page": "/dashboard",
+      "regex": "^/dashboard(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/dashboard(?:/)?$"
+    },
+    {
+      "page": "/fixed-assets",
+      "regex": "^/fixed\\-assets(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fixed\\-assets(?:/)?$"
+    },
+    {
+      "page": "/fixed-assets/depreciation",
+      "regex": "^/fixed\\-assets/depreciation(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fixed\\-assets/depreciation(?:/)?$"
+    },
+    {
+      "page": "/fixed-assets/disposal",
+      "regex": "^/fixed\\-assets/disposal(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fixed\\-assets/disposal(?:/)?$"
+    },
+    {
+      "page": "/fixed-assets/maintenance",
+      "regex": "^/fixed\\-assets/maintenance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fixed\\-assets/maintenance(?:/)?$"
+    },
+    {
+      "page": "/fixed-assets/registry",
+      "regex": "^/fixed\\-assets/registry(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fixed\\-assets/registry(?:/)?$"
+    },
+    {
+      "page": "/fixed-assets/schedule",
+      "regex": "^/fixed\\-assets/schedule(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fixed\\-assets/schedule(?:/)?$"
+    },
+    {
+      "page": "/fixed-assets/tagging",
+      "regex": "^/fixed\\-assets/tagging(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/fixed\\-assets/tagging(?:/)?$"
+    },
+    {
+      "page": "/income-expenses",
+      "regex": "^/income\\-expenses(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/income\\-expenses(?:/)?$"
+    },
+    {
+      "page": "/inventory",
+      "regex": "^/inventory(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/inventory(?:/)?$"
+    },
+    {
+      "page": "/login",
+      "regex": "^/login(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/login(?:/)?$"
+    },
+    {
+      "page": "/payables-receivables",
+      "regex": "^/payables\\-receivables(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/payables\\-receivables(?:/)?$"
+    },
+    {
+      "page": "/payroll",
+      "regex": "^/payroll(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/payroll(?:/)?$"
+    },
+    {
+      "page": "/payroll/deductions",
+      "regex": "^/payroll/deductions(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/payroll/deductions(?:/)?$"
+    },
+    {
+      "page": "/payroll/employees",
+      "regex": "^/payroll/employees(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/payroll/employees(?:/)?$"
+    },
+    {
+      "page": "/payroll/leave",
+      "regex": "^/payroll/leave(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/payroll/leave(?:/)?$"
+    },
+    {
+      "page": "/payroll/payslips",
+      "regex": "^/payroll/payslips(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/payroll/payslips(?:/)?$"
+    },
+    {
+      "page": "/payroll/reports",
+      "regex": "^/payroll/reports(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/payroll/reports(?:/)?$"
+    },
+    {
+      "page": "/procurement",
+      "regex": "^/procurement(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/procurement(?:/)?$"
+    },
+    {
+      "page": "/procurement/grn",
+      "regex": "^/procurement/grn(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/procurement/grn(?:/)?$"
+    },
+    {
+      "page": "/procurement/vendors",
+      "regex": "^/procurement/vendors(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/procurement/vendors(?:/)?$"
+    },
+    {
+      "page": "/procurement/workflow",
+      "regex": "^/procurement/workflow(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/procurement/workflow(?:/)?$"
+    },
+    {
+      "page": "/project-accounts",
+      "regex": "^/project\\-accounts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/project\\-accounts(?:/)?$"
+    },
+    {
+      "page": "/reports",
+      "regex": "^/reports(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports(?:/)?$"
+    },
+    {
+      "page": "/reports/audit-logs",
+      "regex": "^/reports/audit\\-logs(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/audit\\-logs(?:/)?$"
+    },
+    {
+      "page": "/reports/balance-sheet",
+      "regex": "^/reports/balance\\-sheet(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/balance\\-sheet(?:/)?$"
+    },
+    {
+      "page": "/reports/budget-actual",
+      "regex": "^/reports/budget\\-actual(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/budget\\-actual(?:/)?$"
+    },
+    {
+      "page": "/reports/custom-builder",
+      "regex": "^/reports/custom\\-builder(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/custom\\-builder(?:/)?$"
+    },
+    {
+      "page": "/reports/donor-funds",
+      "regex": "^/reports/donor\\-funds(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/donor\\-funds(?:/)?$"
+    },
+    {
+      "page": "/reports/general-ledger",
+      "regex": "^/reports/general\\-ledger(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/general\\-ledger(?:/)?$"
+    },
+    {
+      "page": "/reports/income-statement",
+      "regex": "^/reports/income\\-statement(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/income\\-statement(?:/)?$"
+    },
+    {
+      "page": "/reports/invoice-aging",
+      "regex": "^/reports/invoice\\-aging(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/invoice\\-aging(?:/)?$"
+    },
+    {
+      "page": "/reports/payroll-summary",
+      "regex": "^/reports/payroll\\-summary(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/payroll\\-summary(?:/)?$"
+    },
+    {
+      "page": "/reports/project-summary",
+      "regex": "^/reports/project\\-summary(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/project\\-summary(?:/)?$"
+    },
+    {
+      "page": "/reports/snapshots",
+      "regex": "^/reports/snapshots(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/snapshots(?:/)?$"
+    },
+    {
+      "page": "/reports/student-fees",
+      "regex": "^/reports/student\\-fees(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/student\\-fees(?:/)?$"
+    },
+    {
+      "page": "/reports/trial-balance",
+      "regex": "^/reports/trial\\-balance(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/trial\\-balance(?:/)?$"
+    },
+    {
+      "page": "/reports/utility-expenses",
+      "regex": "^/reports/utility\\-expenses(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/utility\\-expenses(?:/)?$"
+    },
+    {
+      "page": "/reports/vendor-payments",
+      "regex": "^/reports/vendor\\-payments(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/reports/vendor\\-payments(?:/)?$"
+    },
+    {
+      "page": "/settings",
+      "regex": "^/settings(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/settings(?:/)?$"
+    },
+    {
+      "page": "/student-accounts",
+      "regex": "^/student\\-accounts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/student\\-accounts(?:/)?$"
+    },
+    {
+      "page": "/utility-accounts",
+      "regex": "^/utility\\-accounts(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/utility\\-accounts(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "RSC",
+    "varyHeader": "RSC, Next-Router-State-Tree, Next-Router-Prefetch, Next-Router-Segment-Prefetch",
+    "prefetchHeader": "Next-Router-Prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSuffix": ".prefetch.rsc",
+    "prefetchSegmentHeader": "Next-Router-Segment-Prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments"
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  },
+  "rewrites": []
+}
